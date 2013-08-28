@@ -1,0 +1,166 @@
+
+/* GLOBAL
+------------------------------------------------------- */
+#ebor-popup {
+	width: 560px;
+	font: 12px/20px Arial, Helvetica, sans-serif;
+	overflow: hidden;
+}
+#ebor-popup * {
+	font: 12px/20px Arial, Helvetica, sans-serif;	
+}
+
+/* form side */
+#ebor-sc-form-wrap {
+	width: 550px;
+	float: left;
+}
+#ebor-sc-form-wrap #ebor-sc-form-head {
+	width: 520px;
+	padding: 15px;
+	color: #fff;
+	font-weight: bold;
+	line-height: 1;
+	text-shadow: 0 -1px 0 #000;
+	background-color: #404040;
+}
+#ebor-popup.no_preview #ebor-sc-form-wrap #ebor-sc-form-head {
+	width: 530px;
+}
+#ebor-sc-form-wrap #ebor-sc-form {
+	width: 490px;
+	padding: 15px;
+}
+
+
+
+/* FORM
+------------------------------------------------------- */
+
+#ebor-sc-form-table {
+	width: 530px;
+}
+#ebor-sc-form-table tbody tr.form-row {
+	display: block;
+	padding: 5px 0;
+	border-bottom: solid 1px #eaeaea;
+}
+#ebor-sc-form-table tbody:last-child tr.form-row {
+	border-bottom: none;
+}
+#ebor-sc-form-table tbody tr.form-row .label {
+	width: 130px;
+	text-align: left;
+	vertical-align: top;
+	line-height: 35px;
+	padding-right: 20px;
+}
+#ebor-sc-form-table tbody tr.form-row .field {
+	width: 370px;
+}
+#ebor-sc-form-table tbody tr.form-row .ebor-insert {
+	color: #fff;
+}
+
+/* child rows, sortable */
+#ebor-sc-form-table .has-child #form-child-add {
+	display: block;
+	width: 520px;
+	padding: 0;
+	height: 30px;
+	line-height: 30px;
+	margin-bottom: 20px;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+}
+#ebor-sc-form-table .has-child .child-clone-rows {
+	display: block;
+}
+#ebor-sc-form-table .has-child .child-clone-rows .child-clone-row {
+	padding: 8px 15px;
+	background: #f7f7f7;
+	border: solid 1px #e0e0e0;
+	margin-bottom: 10px;
+	cursor: move;
+}
+#ebor-sc-form-table .has-child .sortable-placeholder {
+	border: dashed 2px #e0e0e0;
+	margin-bottom: 10px;
+	background: #f7f7f7;
+	height: 40px;
+}
+#ebor-sc-form-table .has-child .child-clone-rows .child-clone-row .child-clone-row-form {
+	display: block;
+}
+#ebor-sc-form-table .has-child .child-clone-rows .child-clone-row .child-clone-row-form .child-clone-row-form-row {
+	display: block;
+	padding: 7px 0;
+	border-bottom: solid 1px #ddd;
+}
+#ebor-sc-form-table .has-child .child-clone-rows .child-clone-row .child-clone-row-form .child-clone-row-form-row .child-clone-row-label label {
+	display: block;
+	font-weight: bold;
+	font-style: italic;
+	padding-bottom: 7px;
+	line-height: 1;
+}
+#ebor-sc-form-table .has-child .child-clone-rows .child-clone-row .child-clone-row-remove {
+	color: #FF0000;
+	padding: 1px;
+}
+#ebor-sc-form-table .has-child .child-clone-rows .child-clone-row .child-clone-row-remove:hover {
+	color: #fff;
+	background: #FF0000;
+}
+
+/* form elements */
+
+/* - all */
+#ebor-sc-form-table tbody tr.form-row .ebor-form-text,
+#ebor-sc-form-table tbody tr.form-row .ebor-form-textarea,
+#ebor-sc-form-table tbody tr.form-row .ebor-form-select {
+	width: 370px;
+	padding: 5px 10px;
+	background: #f7f7f7;
+	border: none;
+	border-left: solid 1px #ddd;
+	border-top: solid 1px #ddd;
+}
+#ebor-sc-form-table tbody tr.form-row.has-child .ebor-form-text,
+#ebor-sc-form-table tbody tr.form-row.has-child .ebor-form-textarea,
+#ebor-sc-form-table tbody tr.form-row.has-child .ebor-form-select {
+	background: #fff;
+	width: 485px;
+}
+
+/* - textarea */
+#ebor-sc-form-table tbody tr.form-row .ebor-form-textarea {
+	height: 120px;
+}
+#ebor-sc-form-table tbody tr.form-row.has-child .ebor-form-textarea {
+	height: 100px;
+}
+
+/* - select */
+#ebor-sc-form-table tbody tr.form-row .ebor-form-select {
+	display: block;
+	height: 25px;
+}
+#ebor-sc-form-table tbody tr.form-row.has-child .ebor-form-select {
+	width: auto;
+	height: 25px;
+}
+
+/* - desc */
+#ebor-sc-form-table tbody tr.form-row .field .ebor-form-desc,
+#ebor-sc-form-table tbody tr.form-row .child-clone-row-desc {
+	display: block;
+	font-size:  12px;
+	color: #aaa;
+	font-style: italic;
+	padding-top: 3px;
+}
+
+/* Hide outline on focus */
+#content_ebor_button { outline: none; }
