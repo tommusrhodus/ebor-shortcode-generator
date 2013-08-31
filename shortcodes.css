@@ -150,6 +150,10 @@ h2.resp-accordion {
     margin-bottom: -1px;
 }
 
+.resp-tab-content p {
+	max-width: 100%;
+}
+
 h2.resp-accordion {
     font-size: 13px;
     border: 1px solid #c1c1c1;
