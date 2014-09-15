@@ -9,6 +9,11 @@
 #ebor-popup * {
 	font: 12px/20px Arial, Helvetica, sans-serif;	
 }
+i.mce-ico.mce-i-ebor_button {
+	background-image: url('../../img/logo.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
 
 /* form side */
 #ebor-sc-form-wrap {
