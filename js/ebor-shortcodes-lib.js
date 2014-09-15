@@ -123,10 +123,12 @@ jQuery(document).ready(function () {
             fit: true
         });
         
-        jQuery('#accordion').easyResponsiveTabs({
-            type: 'accordion',
-            width: 'auto',
-            fit: true
+        jQuery('.ebor-tabs[data-type="accordion"]').each(function(){
+        	jQuery(this).easyResponsiveTabs({
+        	    type: 'accordion',
+        	    width: 'auto',
+        	    fit: true
+        	});
         });
         jQuery(window).trigger('resize');
         jQuery('.ebor-alert img').click(function(){

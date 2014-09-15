@@ -143,10 +143,11 @@ jQuery(document).ready(function($) {
     		
     		// when insert is clicked
     		$('.ebor-insert', form).click(function() {    		 			
-    			if(parent.tinymce)
-    			{                parent.tinymce.activeEditor.execCommand('mceInsertContent',false,$('#_ebor_ushortcode', form).html());
-    			tb_remove();
-    			}
+    			if(window.tinyMCE)
+				{
+					window.tinyMCE.execInstanceCommand('content', 'mceInsertContent', false, $('#_ebor_ushortcode', form).html());
+					tb_remove();
+				}
     		});
     	}
 	}

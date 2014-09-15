@@ -3,7 +3,7 @@
 Plugin Name: Ebor Shortcodes Generator
 Plugin URI: http://www.madeinebor.com
 Description: Super simple shortcodes for your theme.
-Version: 1.0
+Version: 1.0.1
 Author: TommusRhodus
 Author URI: http://www.madeinebor.com
 */
@@ -52,8 +52,12 @@ class eborShortcodes {
 	 */
 	function add_rich_plugins( $plugin_array )
 	{
-		$plugin_array['eborShortcodes'] = ebor_TINYMCE_URI . '/plugin.js';
-		return $plugin_array;
+	if ( floatval(get_bloginfo('version')) >= 3.9){
+	$plugin_array['eborShortcodes'] = ebor_TINYMCE_URI . '/plugin.js';
+	}else{
+	$plugin_array['eborShortcodes'] = ebor_TINYMCE_URI . '/plugin.old.js'; // For old versions of WP
+	}
+	return $plugin_array;
 	}
 	
 	// --------------------------------------------------------------------------
@@ -84,12 +88,15 @@ class eborShortcodes {
 		wp_enqueue_script( 'jquery-livequery', ebor_TINYMCE_URI . '/js/jquery.livequery.js', false, '1.1.1', false );
 		wp_enqueue_script( 'jquery-appendo', ebor_TINYMCE_URI . '/js/jquery.appendo.js', false, '1.0', false );
 		wp_enqueue_script( 'base64', ebor_TINYMCE_URI . '/js/base64.js', false, '1.0', false );
+		if ( floatval(get_bloginfo('version')) >= 3.9){
 		wp_enqueue_script( 'ebor-popup', ebor_TINYMCE_URI . '/js/popup.js', false, '1.0', false );
+		}else{
+		wp_enqueue_script( 'ebor-popup', ebor_TINYMCE_URI . '/js/popup.old.js', false, '1.0', false );
+		//For older versions of WP
+		}
 		
 		wp_localize_script( 'jquery', 'eborShortcodes', array('plugin_folder' => plugin_dir_url( __FILE__ ) ) );
 	}
     
 }
 $ebor_shortcodes = new eborShortcodes();
-
-?>

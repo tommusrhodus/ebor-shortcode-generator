@@ -222,7 +222,7 @@ if (!function_exists('ebor_tabs')) {
 		$output = '';        
 		
 		if( count($tab_titles) ){
-		    $output .= '<div id="' . $type . '" class="ebor-tabs">';
+		    $output .= '<div id="' . $type . '" class="ebor-tabs" data-type="' . $type . '">';
 			$output .= '<ul class="resp-tabs-list">';
 			
 			foreach( $tab_titles as $tab ){
