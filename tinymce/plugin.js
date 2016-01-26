@@ -22,7 +22,7 @@
 						editor.execCommand("eborPopup", false, {title: 'Alerts',identifier: 'alert'})
 					}},
 					{text: 'Buttons',onclick:function(){
-						editor.execCommand("eborPopup", false, {title: 'Buttons',identifier: 'buttons'})
+						editor.execCommand("eborPopup", false, {title: 'Buttons',identifier: 'button'})
 					}},
 					{text: 'Columns',onclick:function(){
 						editor.execCommand("eborPopup", false, {title: 'Columns',identifier: 'columns'})
